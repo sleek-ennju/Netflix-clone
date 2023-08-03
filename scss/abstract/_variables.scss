@@ -1,0 +1,32 @@
+// Color Variables
+$red: rgb(213,13,22);
+$white: rgb(255,255,255);
+$white-darker: rgba(255,255,255,0.7);
+$black: rgb(0,0,0);
+$blue: rgb(0,113,235);
+$grey-dark: rgb(45,45,45);
+$grey-darker: rgb(15,15,15);
+$grey-light: lighten($grey-dark, 20%);
+$linear-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+
+// Font Variables
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+// Font Sizes
+$font-b: 2.875rem;
+$font-m: 2rem;
+$font-smm:1.8rem;
+$font-sm:1.6rem;
+$font-sms:1.4rem;
+$font-sms3:1.3rem;
+$font-sms2:1.2rem;
+$font-sms16:1.16rem;
+$font-sms1:1.1rem;
+$font-nm:1rem;
+$font-esm:0.9rem;
+$font-exm:0.875rem;
+$font-exxm:0.775rem;
+
+// Border style
+$border-line: 0.4375rem solid $grey-dark;

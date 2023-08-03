@@ -1,0 +1,39 @@
+@use '../abstract/variables' as *;
+
+@mixin container($width:90%, $max-width:61.25rem){
+    width: min($width, $max-width);
+    margin-inline: auto;
+}
+
+
+@mixin flex($justify:null, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($template: repeat(2, 1fr), $gap:2rem, $place: center){
+    display: grid;
+    grid-template-columns: $template;
+    gap: $gap;
+    place-items: $place;
+}
+
+@mixin grid-container(){
+    @include container();
+    @include grid(auto);
+    padding-block: 4rem;
+}
+
+@mixin section-text(){
+    color: $white;
+    text-align: center;
+    & > h2{
+        font-size: clamp($font-smm, 4vw, $font-b);
+        margin-bottom: .4em;
+    }
+    & > p{
+        font-size: clamp($font-sms2, 4vw, $font-sm);
+        line-height: 1.3;
+    }
+}

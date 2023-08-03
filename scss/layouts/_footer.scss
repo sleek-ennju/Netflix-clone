@@ -1,0 +1,38 @@
+@use '../abstract' as *;
+footer{
+    font-family: $montserrat;
+    .wrapper{
+        @include container();
+        padding-block: 2rem;
+
+        & a{
+            display: block;
+            color: $white-darker;
+        }
+        & > div:first-child{
+            margin-bottom: 2rem;
+            font-size: clamp($font-esm, 2vw, $font-nm);
+        }
+        & > div:nth-child(2){
+           @include grid($gap: null, $place: null);
+            
+            div a{
+                font-size: clamp($font-exxm, 2vw, $font-exm);
+                margin-block: .6em;
+            }
+            
+        }
+        .lang-section{
+            margin-top: 2rem;
+            width: fit-content;
+            & select{
+                width: max(9rem, 1rem);
+            }
+        }
+        p{
+            color: $white-darker;
+            font-size: clamp($font-exxm, 2vw, $font-exm);
+            margin-top: 1rem;
+        }
+    }
+}

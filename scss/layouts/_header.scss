@@ -1,0 +1,52 @@
+@use '../abstract/' as *;
+
+header{
+    height: 105vh;
+    background-image: url('../../images/hero-bg2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .hero{
+        @include container();
+        position: relative;
+        z-index: 2;
+
+        .nav-bar{
+           @include flex(space-between);
+            padding-top: 1.4rem;
+
+            .logo{
+                width: clamp(5.456rem, 23%, 9.5rem);
+            }
+
+            nav{
+                @include flex(space-between);
+                
+                button{
+                    margin-left: 1em;
+                }
+
+            }
+        }
+        .hero-intro{
+            text-align: center;
+            color: $white;
+            margin-top: clamp(7rem, 20vw, 14rem);
+            
+            p{
+                font-size: clamp($font-sms2, 4vw, $font-sm);
+                font-weight: 400;
+            }
+            h1{
+                font-size: clamp($font-smm, 4vw, $font-b);
+                font-weight: 800;
+            }
+            button{
+                margin-top: 1.4rem;
+                margin-inline: auto;
+            }
+        }
+    }
+}

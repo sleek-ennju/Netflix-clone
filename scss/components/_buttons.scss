@@ -1,0 +1,33 @@
+@use '../abstract' as *;
+
+button{
+    width: fit-content;
+    cursor: pointer;
+    background-color: $red;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-family: $montserrat !important;
+    transition: all ease 300ms;
+
+    &:hover{
+     background-color: darken($red, 5%);   
+    }
+}
+.small-btn{
+    font-size: clamp($font-exxm, 2vw, $font-exm);
+    padding: .4em 1em;
+    font-weight: 500;
+    
+}
+.big-btn{
+    font-size: $font-sms;
+    padding: clamp(.4em, 4vw, .5em) 1em;
+    font-weight: 600;
+    @include flex(space-between);
+
+    span{
+        margin-left: .2em;
+    }
+}

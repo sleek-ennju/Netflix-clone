@@ -1,0 +1,32 @@
+@use '../abstract' as *;
+
+                    
+    .lang-section-box{
+        display: flex;
+        border: 1px solid $grey-light;
+        border-radius: 4px;
+        font-size: clamp(.8rem, 2vw, .9rem);
+        padding: .28em .6em;
+        background-color: rgba($grey-darker, 0.4);
+
+        .globe{
+            width: 1.4rem;
+            height: auto;
+        }
+        select{
+            font-family: $montserrat;
+            border: none;
+            outline: none;
+            width: 1rem;
+            padding-right: 1.6em;
+            background-color: transparent;
+            color: $white;
+            cursor: pointer;
+            
+            
+            option{
+                color: $black;
+                font-family: inherit;
+            }
+        }
+    }

@@ -1,0 +1,176 @@
+@use '../abstract' as *;
+main{
+    .enjoy{
+        border-block: $border-line;
+        .wrapper{
+            @include grid-container();
+            .enjoy-text{
+               @include section-text();
+            }
+            .enjoy-video{
+                position: relative;
+                @include grid(auto, $gap:0);
+    
+                img{
+                    width: 100%;
+                    z-index: 2;
+                    margin-inline: auto;
+                }
+                .video-box{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -51%);
+                    width: 73%;
+    
+                    video{
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+                
+                
+            }
+        }  
+    }
+    .download{
+        border-bottom: $border-line;
+        .wrapper{
+            @include grid-container();
+            .download-text{
+                @include section-text();
+            }
+            .download-imagery{
+                position: relative;
+                & > img{
+                    width: 100%;
+                    margin-inline: auto;
+                }
+                .boxshot{
+                    color: $white;
+                    background-color: $black;
+                    padding: .4em;
+                    display: flex;
+                    border: 2px solid $grey-light;
+                    border-radius: 8px;
+                    width: min(100%, 16rem);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 7%;
+                    transform: translate(-50%);
+                    
+                    div:has(img){
+                        width: min(100%, 4rem);
+                        margin-right: 1rem;
+                        img{
+                            object-fit: contain;
+                        }
+                    }
+                    & > div:nth-child(2){
+                        width: 100%;
+                        line-height: 1.3;
+                        align-self: center;
+                        & > p:first-child{
+                            font-size: clamp($font-esm, 2vw, $font-nm);
+                            font-weight: 700;
+                        }
+                        & > p:last-child{
+                            font-size: clamp($font-exxm, 2vw, $font-exm);
+                            color: $blue;
+                            margin-left: auto;
+                        }
+                    }
+                    & >div:last-child{
+                        width: 50%;
+                        background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    .watch{
+        border-bottom: $border-line;
+        .wrapper{
+            @include grid-container();
+            section{
+                @include section-text();
+                padding-bottom: 5rem;
+            }
+        }
+    }
+    .kids{
+        border-bottom: $border-line;
+        .wrapper{
+            @include grid-container();
+            .kids-text{
+                @include section-text();
+            }
+            .kids-imagery{
+                div{
+                    width: 100%;
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+    .faq{
+        font-family: $roboto;
+        border-bottom: $border-line;
+        .wrapper{
+            @include grid-container();
+            h2{
+                color: $white;
+                text-align: center;
+                font-size: clamp($font-smm, 4vw, $font-b);
+                margin-bottom: .4em;
+            }
+            div{
+                .faq-wrapper{
+                    max-width: 100%;
+                    div{
+                        background-color: $grey-dark;
+                        color: $white;
+                    }
+                    .question{
+                        @include flex(space-between);
+                        font-size: clamp($font-sms16, 2vw, $font-sm);
+                        padding: 1em 1.4em;
+                        transition: ease 300ms;
+                        span > svg{
+                           font-size: clamp($font-nm, 2vw, $font-sm);
+                           transition: transform ease 1000ms;
+                        }
+                    }
+                    .question:hover{
+                        cursor: pointer;
+                        background-color: $grey-light;
+                    }
+                    .answer{
+                        margin-top: 2px;
+                        padding: 0 clamp(1.6em, 4vw, 2.2em);
+                        max-height: 0;
+                        overflow-y: hidden;
+                        transition: all 300ms cubic-bezier(0.5, 0, 0.1, 1);
+                        p{
+                            font-size: clamp($font-sms1, 2vw, $font-sms);
+                            line-height: 1.4;
+                        }
+                        p + p{
+                            margin-top: 1.2em;
+                        }
+                    }
+                }
+                .faq-wrapper + .faq-wrapper{
+                    margin-top: .4rem;
+                }
+            }
+            button{
+                margin-top: 1.4rem;
+            }
+            
+        }
+    }
+}

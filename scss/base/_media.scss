@@ -1,0 +1,40 @@
+@use '../abstract' as *;
+
+@media(width > 580px){
+    .hero{
+        @include container(76%);
+    }
+    #lang{
+        width: max(9rem, 1rem);
+        padding-right: 0;
+    }
+    footer > .wrapper > div:nth-child(2){
+        @include grid($template: repeat(3, 1fr), $place: null);
+    }
+    
+
+}
+@media(width > 960px){
+    .enjoy > .wrapper, .download > .wrapper, .watch > .wrapper, .kids > .wrapper{
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 4rem;
+    }
+    .enjoy-text, .download-text, .watch section, .kids-text{
+        text-align: left !important;
+    }
+    .download-imagery, .kids-imagery{
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+    
+    .boxshot{
+        div:has(img){
+            width: min(100%, 8.6rem) !important;
+        }
+        
+        & >div:last-child{
+            margin-left: .6rem;
+        }
+    }
+
+}

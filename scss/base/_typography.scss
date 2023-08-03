@@ -1,0 +1,11 @@
+@use '../abstract' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+h1,h2,h3,h4{
+    font-family: $montserrat;
+  }
+  
+  p{
+    font-family:$roboto ;
+  }
