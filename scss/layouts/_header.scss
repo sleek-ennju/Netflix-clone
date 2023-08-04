@@ -10,12 +10,16 @@ header{
 
     .hero{
         @include container();
+        @include flex(space-between, $align: null);
+        flex-direction: column;
         position: relative;
+        padding-block: 1.4rem 2.2rem;
+        height: 100%;
         z-index: 2;
 
         .nav-bar{
            @include flex(space-between);
-            padding-top: 1.4rem;
+            // padding-top: 1.4rem;
 
             .logo{
                 width: clamp(5.456rem, 23%, 9.5rem);
@@ -33,7 +37,7 @@ header{
         .hero-intro{
             text-align: center;
             color: $white;
-            margin-top: clamp(7rem, 20vw, 14rem);
+            // margin-top: clamp(7rem, 20vw, 14rem);
             
             p{
                 font-size: clamp($font-sms2, 4vw, $font-sm);
